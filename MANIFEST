@@ -1,0 +1,8 @@
+Changes
+Client.xs
+Makefile.PL
+MANIFEST
+ppport.h
+README
+t/VXI11-Client.t
+lib/VXI11/Client.pm

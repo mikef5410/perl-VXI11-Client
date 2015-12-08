@@ -1,0 +1,6 @@
+Revision history for Perl extension VXI11::Client.
+
+0.01  Tue Feb 26 09:38:12 2013
+	- original version; created by h2xs 1.23 with options
+		-A -x -n VXI11::Client
+

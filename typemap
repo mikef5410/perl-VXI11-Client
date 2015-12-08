@@ -1,0 +1,4 @@
+VXI11Context *					T_PTROBJ
+VXI11::Client					T_PTROBJ
+unsigned int					T_UV
+int	                                        T_IV
