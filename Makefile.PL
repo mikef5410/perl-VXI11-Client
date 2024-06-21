@@ -11,9 +11,9 @@ WriteMakefile(
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/VXI11/Client.pm', # retrieve abstract from module
        AUTHOR         => 'daniel <daniel@>') : ()),
-    LIBS              => ['-lpthread -lrt ' . ExtUtils::PkgConfig->libs("gthread-2.0") . ' ' . ExtUtils::PkgConfig->libs("glib-2.0")], # e.g., '-lm'
+    LIBS              => ['-lpthread -lrt ' . ExtUtils::PkgConfig->libs("gthread-2.0") . ' ' . ExtUtils::PkgConfig->libs("glib-2.0") . ' ' . ExtUtils::PkgConfig->libs("libtirpc") ], # e.g., '-lm'
     DEFINE            => '', # e.g., '-DHAVE_SOMETHING'
-    INC               => '-I.' . ExtUtils::PkgConfig->cflags_only_I("gthread-2.0") . ' ' . ExtUtils::PkgConfig->cflags_only_I("glib-2.0"), # e.g., '-I. -I/usr/include/other'
+    INC               => '-I.' . ExtUtils::PkgConfig->cflags_only_I("gthread-2.0") . ' ' . ExtUtils::PkgConfig->cflags_only_I("glib-2.0") . ' ' . ExtUtils::PkgConfig->cflags_only_I("libtirpc"), # e.g., '-I. -I/usr/include/other'
     OBJECT            => '$(O_FILES)', # link all the C files too
 );
 if  (eval {require ExtUtils::Constant; 1}) {
